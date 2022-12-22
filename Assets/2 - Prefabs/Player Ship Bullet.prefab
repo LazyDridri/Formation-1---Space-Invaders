@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7827530788715222294}
   - component: {fileID: 2473604133723544399}
+  - component: {fileID: 8613952642537732107}
   m_Layer: 0
   m_Name: Player Ship Bullet
   m_TagString: Untagged
@@ -30,7 +31,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2473604133723544399
 SpriteRenderer:
@@ -84,3 +85,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8613952642537732107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 183573103469506233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43c36e1ee455f9746a0d186c943b4dae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+  deathTimeSeconds: 10
