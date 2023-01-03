@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 282716856}
   - component: {fileID: 282716855}
   - component: {fileID: 282716857}
+  - component: {fileID: 282716858}
   m_Layer: 0
   m_Name: Player Ship
   m_TagString: Untagged
@@ -221,6 +222,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabPlayerShipBullet: {fileID: 183573103469506233, guid: 074498f6a942c6148a2105e96509b122, type: 3}
+--- !u!114 &282716858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 282716854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fde8019eabbaf6a44a61c5c5649ffbe6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  maxDistanceFromCenter: 8
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -364,6 +379,38 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: e670b15f-1de0-47d5-bc1f-0266a9849d20
     m_ActionName: Game/Shoot[/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1069864512}
+        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
+        m_MethodName: Left
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: a7c72a7e-056d-4506-a3d3-cd7a79555181
+    m_ActionName: Game/Left[/Keyboard/leftArrow]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1069864512}
+        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
+        m_MethodName: Right
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: af71365a-ca3e-4901-a592-ee0fe3e34aa2
+    m_ActionName: Game/Right[/Keyboard/rightArrow]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Game
@@ -397,3 +444,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerShipShooter: {fileID: 282716857}
+  playerShipMovement: {fileID: 282716858}
