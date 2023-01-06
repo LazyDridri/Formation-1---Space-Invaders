@@ -16,4 +16,20 @@ public class PlayerShipBullet : MonoBehaviour
   {
     this.transform.position += new Vector3(0, speed * Time.deltaTime);
   }
+
+  private void OnTriggerEnter2D(Collider2D other)
+  {
+    if (other.gameObject.tag == "EnemyShip")
+    {
+      EnemyShip enemyShip = other.gameObject.GetComponent<EnemyShip>();
+      enemyShip.Kill();
+
+      this.Kill();
+    }
+  }
+
+  private void Kill()
+  {
+    Destroy(this.gameObject);
+  }
 }
