@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1286653706635718536}
   - component: {fileID: 1769312544926813585}
   - component: {fileID: 5365462277210709821}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Enemy Ship
   m_TagString: EnemyShip
   m_Icon: {fileID: 0}
@@ -146,3 +146,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1498117d8e7f20d48a5517f0ae7b0ea0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 5
+  distanceLimit: 3
+  resetOffset: 25
