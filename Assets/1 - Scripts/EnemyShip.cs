@@ -9,7 +9,7 @@ public class EnemyShip : MonoBehaviour
   public float resetOffset;
 
   private GameObject target;
-  private State currentState;
+  public State currentState;
   private Vector3 finalDirection;
 
   private void Update()
@@ -58,7 +58,7 @@ public class EnemyShip : MonoBehaviour
     }
   }
 
-  private enum State
+  public enum State
   {
     IDLE,
     ATTACKING,

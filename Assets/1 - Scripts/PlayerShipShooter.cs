@@ -8,6 +8,6 @@ public class PlayerShipShooter : MonoBehaviour
 
   public void Shoot()
   {
-    Instantiate(prefabPlayerShipBullet);
+    Instantiate(prefabPlayerShipBullet, this.transform.position, new Quaternion());
   }
 }
