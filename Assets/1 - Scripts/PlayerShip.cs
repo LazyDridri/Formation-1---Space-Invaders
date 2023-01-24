@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerShip : MonoBehaviour
 {
+  public float respawnTimer;
+
   private void OnCollisionEnter2D(Collision2D other)
   {
     if (other.gameObject.tag == "EnemyShip")
@@ -17,6 +19,23 @@ public class PlayerShip : MonoBehaviour
 
   private void Kill()
   {
-    Destroy(this.gameObject);
+    GetComponent<SpriteRenderer>().enabled = false;
+    GetComponent<Collider2D>().enabled = false;
+
+    int newLifeNumber = FindObjectOfType<LifeManager>().LoseLife();
+    if (newLifeNumber >= 0)
+      StartCoroutine(coroutine_Respawn());
+
+    FindObjectOfType<EnemyGroupAttack>().SetAttack(false);
+  }
+
+  private IEnumerator coroutine_Respawn()
+  {
+    yield return new WaitForSeconds(respawnTimer);
+
+    GetComponent<SpriteRenderer>().enabled = true;
+    GetComponent<Collider2D>().enabled = true;
+
+    FindObjectOfType<EnemyGroupAttack>().SetAttack(true);
   }
 }
