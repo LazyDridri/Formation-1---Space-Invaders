@@ -6,11 +6,20 @@ public class LifeManager : MonoBehaviour
 {
   public int initialLifeNumber;
 
+  public GameObject uiLivesParent;
+  public GameObject uiLifePrefab;
+
   private int currentLifeNumber;
 
   private void Start()
   {
     currentLifeNumber = initialLifeNumber;
+
+    for (int i = 0; i < currentLifeNumber; i++)
+    {
+      GameObject uiLife = Instantiate(uiLifePrefab);
+      uiLife.transform.SetParent(uiLivesParent.transform);
+    }
   }
 
   public int LoseLife()
@@ -19,6 +28,8 @@ public class LifeManager : MonoBehaviour
 
     if (currentLifeNumber < 0)
       FindObjectOfType<GameManager>().Lose();
+    else
+      Destroy(uiLivesParent.transform.GetChild(currentLifeNumber).gameObject);
 
     return currentLifeNumber;
   }

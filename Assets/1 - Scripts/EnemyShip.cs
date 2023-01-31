@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class EnemyShip : MonoBehaviour
 {
   public float speed;
   public float distanceLimit;
   public float resetOffset;
+  public int killScore;
 
   public State currentState { get; private set; }
   private GameObject target;
@@ -65,6 +67,8 @@ public class EnemyShip : MonoBehaviour
 
   public void Kill()
   {
+    FindObjectOfType<ScoreManager>().AddScore(killScore);
+
     Destroy(this.gameObject);
   }
 
