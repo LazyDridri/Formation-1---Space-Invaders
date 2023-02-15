@@ -25,9 +25,12 @@ public class EnemyShip : MonoBehaviour
     if (currentState == State.IDLE)
     {
       this.transform.position = groupPosition;
+      GetComponent<Animator>().SetBool("isMoving", false);
     }
     else if (currentState == State.ATTACKING)
     {
+      GetComponent<Animator>().SetBool("isMoving", true);
+
       Vector3 direction = target.transform.position - this.transform.position;
       direction = direction.normalized;
 

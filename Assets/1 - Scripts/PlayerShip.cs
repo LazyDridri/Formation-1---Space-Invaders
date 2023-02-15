@@ -27,6 +27,7 @@ public class PlayerShip : MonoBehaviour
       StartCoroutine(coroutine_Respawn());
 
     FindObjectOfType<EnemyGroupAttack>().SetAttack(false);
+    GetComponent<PlayerShipShooter>().SetAttack(false);
   }
 
   private IEnumerator coroutine_Respawn()
@@ -37,5 +38,6 @@ public class PlayerShip : MonoBehaviour
     GetComponent<Collider2D>().enabled = true;
 
     FindObjectOfType<EnemyGroupAttack>().SetAttack(true);
+    GetComponent<PlayerShipShooter>().SetAttack(true);
   }
 }
