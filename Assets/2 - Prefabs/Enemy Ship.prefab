@@ -183,6 +183,7 @@ MonoBehaviour:
   distanceLimit: 3
   resetOffset: 25
   killScore: 100
+  prefabExplosion: {fileID: 6515633666121858137, guid: 123758a3495b356468ce3692e4f0c08a, type: 3}
 --- !u!95 &2530873176116966934
 Animator:
   serializedVersion: 4

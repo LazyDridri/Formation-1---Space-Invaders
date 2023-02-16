@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerShip : MonoBehaviour
 {
   public float respawnTimer;
+  public GameObject prefabExplosion;
 
   private void OnCollisionEnter2D(Collision2D other)
   {
@@ -28,6 +29,8 @@ public class PlayerShip : MonoBehaviour
 
     FindObjectOfType<EnemyGroupAttack>().SetAttack(false);
     GetComponent<PlayerShipShooter>().SetAttack(false);
+
+    Instantiate(prefabExplosion, this.transform.position, new Quaternion());
   }
 
   private IEnumerator coroutine_Respawn()

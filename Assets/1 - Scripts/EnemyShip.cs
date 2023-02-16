@@ -9,6 +9,7 @@ public class EnemyShip : MonoBehaviour
   public float distanceLimit;
   public float resetOffset;
   public int killScore;
+  public GameObject prefabExplosion;
 
   public State currentState { get; private set; }
   private GameObject target;
@@ -73,6 +74,7 @@ public class EnemyShip : MonoBehaviour
     FindObjectOfType<ScoreManager>().AddScore(killScore);
 
     Destroy(this.gameObject);
+    Instantiate(prefabExplosion, this.transform.position, new Quaternion());
   }
 
   public void Attack()
