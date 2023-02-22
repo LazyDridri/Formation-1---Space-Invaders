@@ -82,6 +82,8 @@ public class EnemyShip : MonoBehaviour
     PlayerShip playerShip = FindObjectOfType<PlayerShip>();
     target = playerShip.gameObject;
 
+    PlayAttackSound();
+
     currentState = State.ATTACKING;
   }
 
@@ -93,6 +95,11 @@ public class EnemyShip : MonoBehaviour
 
       currentState = State.GOING_BACK;
     }
+  }
+
+  private void PlayAttackSound()
+  {
+    GetComponent<AudioSource>().Play();
   }
 
   public enum State

@@ -7,5 +7,6 @@ public class GameManager : MonoBehaviour
   public void Lose()
   {
     Debug.Log("Game is lost");
+    GetComponent<AudioSource>().Play();
   }
 }
