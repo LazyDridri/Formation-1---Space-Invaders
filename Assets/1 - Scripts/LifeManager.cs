@@ -5,6 +5,7 @@ using UnityEngine;
 public class LifeManager : MonoBehaviour
 {
   public int initialLifeNumber;
+  public int maxLifeNumber;
 
   public GameObject uiLivesParent;
   public GameObject uiLifePrefab;
@@ -32,5 +33,16 @@ public class LifeManager : MonoBehaviour
       Destroy(uiLivesParent.transform.GetChild(currentLifeNumber).gameObject);
 
     return currentLifeNumber;
+  }
+
+  public void AddLife()
+  {
+    if (currentLifeNumber < maxLifeNumber)
+    {
+      currentLifeNumber++;
+      GetComponent<AudioSource>().Play();
+      GameObject uiLife = Instantiate(uiLifePrefab);
+      uiLife.transform.SetParent(uiLivesParent.transform);
+    }
   }
 }
