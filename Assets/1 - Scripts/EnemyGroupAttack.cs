@@ -38,6 +38,7 @@ public class EnemyGroupAttack : MonoBehaviour
 
     int random = Random.Range(0, availableEnemies.Count);
 
-    availableEnemies[random].Attack();
+    if (availableEnemies[random] != null)
+      availableEnemies[random].Attack();
   }
 }

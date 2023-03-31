@@ -570,6 +570,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabPlayerShipBullet: {fileID: 183573103469506233, guid: 074498f6a942c6148a2105e96509b122, type: 3}
   shootSound: {fileID: 8300000, guid: 3de1c4b24e8b97d4a97c6da6a64d03e9, type: 3}
+  shootTempo: 0.5
 --- !u!114 &282716858
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -582,7 +583,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fde8019eabbaf6a44a61c5c5649ffbe6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 10
   maxDistanceFromCenter: 8
 --- !u!50 &282716859
 Rigidbody2D:
@@ -1629,7 +1630,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textScore: {fileID: 204353823}
-  scoreNewLife: 200
+  scoreNewLife: 10000
   textBestScore: {fileID: 1301895081}
 --- !u!1 &1069864509
 GameObject:
@@ -2286,7 +2287,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbe3e009c13727540aa0cce1e42aa161, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialLifeNumber: 1
+  initialLifeNumber: 2
   maxLifeNumber: 3
   uiLivesParent: {fileID: 934553452}
   uiLifePrefab: {fileID: 3726878438455477351, guid: 8c23b46023eff5c45ba95d6b6370e4f0, type: 3}

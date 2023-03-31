@@ -6,6 +6,7 @@ public class PlayerShipShooter : MonoBehaviour
 {
   public GameObject prefabPlayerShipBullet;
   public AudioClip shootSound;
+  public float shootTempo;
 
   private bool canAttack = true;
 
@@ -16,6 +17,9 @@ public class PlayerShipShooter : MonoBehaviour
       Instantiate(prefabPlayerShipBullet, this.transform.position, new Quaternion());
 
       GetComponent<AudioSource>().PlayOneShot(shootSound);
+
+      canAttack = false;
+      StartCoroutine(coroutine_ShootTempo());
     }
 
   }
@@ -23,5 +27,11 @@ public class PlayerShipShooter : MonoBehaviour
   public void SetAttack(bool value)
   {
     canAttack = value;
+  }
+
+  private IEnumerator coroutine_ShootTempo()
+  {
+    yield return new WaitForSeconds(shootTempo);
+    canAttack = true;
   }
 }

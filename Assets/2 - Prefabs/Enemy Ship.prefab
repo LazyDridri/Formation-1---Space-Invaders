@@ -180,10 +180,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1498117d8e7f20d48a5517f0ae7b0ea0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 7
   distanceLimit: 3
   resetOffset: 25
-  killScore: 100
+  killScore: 250
   prefabExplosion: {fileID: 6515633666121858137, guid: 123758a3495b356468ce3692e4f0c08a, type: 3}
 --- !u!95 &2530873176116966934
 Animator:
@@ -215,7 +215,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -7334224447328027030, guid: e54f2cf696e5fb74497bbb6eb5a2a98d, type: 2}
-  m_audioClip: {fileID: 8300000, guid: db96a9872e1c2c5488068cc0e9f5b328, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 2e179f62cc46c38458b75f5c3d5b691c, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
