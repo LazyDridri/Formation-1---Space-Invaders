@@ -41,4 +41,5 @@ public class EnemyGroupAttack : MonoBehaviour
     if (availableEnemies[random] != null)
       availableEnemies[random].Attack();
   }
+
 }
